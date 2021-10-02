@@ -15,7 +15,7 @@ import { NotImplementedError } from '../extensions/index.js';
  */
 export default function transform(arr) {
   let result = [];
-  if (!Array.isArray(arr)) throw new NotImplementedError(`'arr' parameter must be an instance of the Array!`);
+  if (!Array.isArray(arr)) throw new Error(`'arr' parameter must be an instance of the Array!`);
   
   for (let i = 0; i <arr.length; i++) {
     if (/--double-next|--discard-prev|--discard-next|--double-prev/.test(arr[i])) {

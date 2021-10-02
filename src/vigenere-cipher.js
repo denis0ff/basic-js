@@ -25,7 +25,7 @@ export default class VigenereCipheringMachine {
   }
   encrypt(word, keyword) {
     if (word === undefined || keyword === undefined)
-      throw new NotImplementedError("Incorrect arguments!");
+      throw new Error("Incorrect arguments!");
 
     let result = "";
     word = word.toUpperCase();
@@ -50,7 +50,7 @@ export default class VigenereCipheringMachine {
   }
   decrypt(word, keyword) {
     if (word === undefined || keyword === undefined)
-      throw new NotImplementedError("Incorrect arguments!");
+      throw new Error("Incorrect arguments!");
 
     let result = "";
     word = word.toUpperCase();

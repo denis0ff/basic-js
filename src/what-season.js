@@ -14,11 +14,11 @@ import { NotImplementedError } from "../extensions/index.js";
 export default function getSeason(date) {
   if (date === undefined) return "Unable to determine the time of year!";
   if (isNaN(Date.parse(date)))
-    throw new NotImplementedError('Invalid date!');
+    throw new Error('Invalid date!');
 
   let test = Object.getOwnPropertyNames(date)
-  if (test)
-    throw new NotImplementedError('Invalid date!');
+  if (test.length)
+    throw new Error('Invalid date!');
 
   let month = date.getMonth();
 
